@@ -1,0 +1,18 @@
+https://github.com/kuaikuaikim/DFace/blob/master/README_zh.md   这是github的链接
+
+python dface/prepare_data/gen_Pnet_train_data.py --prefix_path /home1/datasets/face_data/detection/widerface/WIDER_train/images/ --dface_traindata_store /home/guochunhe/MTCNN/DFace-master/dface/train1/ --anno_file /home/guochunhe/MTCNN/DFace-master/anno_store/wider_origin_anno.txt --pmodel_file /home/guochunhe/MTCNN/DFace-master/model_store/pnet_epoch.pt
+
+/home1/datasets/face_data/detection/widerface/WIDER_train/images/
+
+/home/guochunhe/MTCNN/DFace-master/dface/train1/
+
+/home/guochunhe/MTCNN/DFace-master/anno_store/wider_origin_anno.txt
+
+python dface/prepare_data/gen_Rnet_train_data.py --prefix_path /home1/datasets/face_data/detection/widerface/WIDER_train/images/ --dface_traindata_store /home/guochunhe/MTCNN/DFace-master/dface/train1/ --anno_file /home/guochunhe/MTCNN/DFace-master/anno_store/wider_origin_anno.txt --pmodel_file /home/guochunhe/MTCNN/DFace-master/model_store/pnet_epoch.pt
+重新开始：
+
+python3 /home/guochunhe/DFace/dface/prepare_data/gen_Pnet_train_data.py --prefix_path /home1/datasets/face_data/detection/widerface/WIDER_train/images/ --dface_traindata_store /home/guochunhe/DFace/dface/train1/ --anno_file /home/guochunhe/DFace/anno_store/wider_origin_anno.txt 
+
+python dface/prepare_data/gen_Onet_train_data.py --prefix_path {注解文件中图片的目录前缀，就是wider face图片所在目录} --dface_traindata_store {之前创建的dface训练数据临时目录} --anno_file {wider face 注解文件,可以不填，默认使用anno_store/wider_origin_anno.txt} --pmodel_file {之前训练的Pnet模型文件} --rmodel_file {之前训练的Rnet模型文件}
+
+python dface/prepare_data/gen_Pnet_train_data.py --prefix_path /home1/datasets/face_data/detection/widerface/WIDER_train/images/ --dface_traindata_store /home/guochunhe/MTCNN/DFace-master/dface/train1/ --anno_file /home/guochunhe/MTCNN/DFace-master/anno_store/wider_origin_anno.txt --pmodel_file /home/guochunhe/MTCNN/DFace-master/model_store/pnet_epoch.pt
