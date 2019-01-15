@@ -1,3 +1,4 @@
+我的运行路径，本地F:\MTCNN  服务器：106： /home/guochunhe/MTCNN/
 https://github.com/kuaikuaikim/DFace/blob/master/README_zh.md   这是github训练步骤的链接
 本项目是在pycharm上运行的，相应的参数具体添加如：
 
