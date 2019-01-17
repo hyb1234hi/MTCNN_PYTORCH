@@ -13,7 +13,13 @@ gen_Onet_train_data添加如下参数：
 
 --prefix_path /home1/datasets/face_data/detection/widerface/WIDER_train/images/ --dface_traindata_store /home/guochunhe/MTCNN/DFace-master/dface/train1/ --anno_file /home/guochunhe/MTCNN/DFace-master/anno_store/wider_origin_anno.txt --pmodel_file /home/guochunhe/MTCNN/DFace-master/model_store/pnet_epoch_3.pt --rmodel_file /home/guochunhe/MTCNN/DFace-master/model_store/rnet_epoch_10.pt
 
-注意：pnet_epoch_3.pt 用的是_3的模型
+注意：pnet_epoch_3.pt 用的是_3的模型 
+
+如果不用pnet_epoch_3.pt这里会遇到报错如下：
+tmp = np.zeros((tmph[i], tmpw[i], 3), dtype=np.uint8)
+ValueError: negative dimensions are not allowed
+github给得解释是：
+使用python2.7和pytorch版本小于0.3
 ################################################################################################################################
 在运行train_p_net.py时 报错 no moudle name dface..
 这里在train_p_net.py中加入sys.path.insert(0,'/home/guochunhe/MTCNN/DFace-master/') 一行解决：如下
